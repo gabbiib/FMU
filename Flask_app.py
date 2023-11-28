@@ -20,6 +20,11 @@ def rentabilidades():
     df = pd.read_csv('uploads/rentabilidades_acumuladas.csv', sep=";", index_col=None)
 
     df['fecha'] = pd.to_datetime(df['fecha'], format='%Y-%m-%d')
+    
+    # Conversión de decimal a porcentaje
+    df['Rentabilidad Acumulada'] = pd.to_numeric(df['Rentabilidad Acumulada'], errors='coerce')
+    df['Rentabilidad Acumulada'] = round(df['Rentabilidad Acumulada'] * 100, 3)
+    
     fechas = df['fecha'].unique()
 
     if fecha_datepicker is None:
@@ -71,6 +76,10 @@ def detalle_fondo(run):
 # Funciones
 def get_rentabilidades(df):
     df['Run Fondo'] = df["Run Fondo"].apply(crear_enlace)
+
+    # Formatear 'Rentabilidad Acumulada' con tres decimales y el signo de porcentaje
+    df['Rentabilidad Acumulada'] = df['Rentabilidad Acumulada'].apply(lambda x: f'{x:.3f}%')
+
     html_table = df.to_html(classes='table', index=False, escape=False)
     return html_table
 
@@ -118,3 +127,4 @@ def ultimo_dia_del_mes(fecha):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
