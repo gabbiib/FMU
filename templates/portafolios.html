@@ -9,7 +9,7 @@
                 <label for="datepicker">Seleccionar Fecha:</label>
             </td>
             <td>
-                <input type="text" id="datepicker" name="datepicker" value="{{ fecha_actual}}">
+                <input type="text" id="datepicker" name="datepicker" value="{{ fecha_actual }}">
             </td>
         </tr>
         <tr>
@@ -37,13 +37,14 @@
             </td>
         </tr>
         <tr>
-            <button class="boton" onclick="submitForm2()">Consultar</button>
+            <!-- Botón con clase adicional para estilos específicos en portafolios.html -->
+            <button class="boton boton-portafolio" onclick="submitForm2()">Consultar</button>
         </tr>
     </table>
 
     <br>
     <div class="contenedor">
-    {{ html|safe }}
+        {{ html|safe }}
     </div>
 </form>
 <script>
