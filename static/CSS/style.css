@@ -367,8 +367,7 @@ tr:hover {
     margin: 10px 0;
     position: absolute; /* Cambiar a posición absoluta */
     top: 220px; /* Ajustar la distancia desde la parte superior */
-    left: 700px; /* Ajustar la distancia desde la derecha */
-    text-align: center;
+    left: 710px; /* Ajustar la distancia desde la derecha */
 }
 
 /* Cambio de color al pasar el ratón sobre el botón */
