@@ -253,7 +253,7 @@ tr:hover {
 /* Datepicker */
 #datepicker {
     width: 70px;
-    height: 20px;
+    height: 10px;
     padding: 10px;
     font-size: 14px;
     cursor: pointer;
@@ -353,6 +353,27 @@ tr:hover {
     margin: 10px 0;
 }
 
+/* Estilo específico para el botón en portafolios.html */
+.boton-portafolio {
+    background-color: #007BFF;
+    color: #fff;
+    height: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px 0;
+    position: absolute; /* Cambiar a posición absoluta */
+    top: 220px; /* Ajustar la distancia desde la parte superior */
+    left: 710px; /* Ajustar la distancia desde la derecha */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+.boton-portafolio:hover {
+    background-color: #0056b3;
+}
 
 /* Cambio de color al pasar el ratón sobre el botón */
 .boton:hover {
